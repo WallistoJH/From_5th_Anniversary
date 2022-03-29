@@ -8,5 +8,7 @@ $(function($){
         '</article>' );
     console.log('test');
     });
+    
+    $(body).addClass('From);
    
 });
