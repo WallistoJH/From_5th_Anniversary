@@ -9,6 +9,6 @@ $(function($){
     console.log('test');
     });
     
-    $(body).addClass('From');
+    $('body').addClass('From');
    
 });
