@@ -177,10 +177,19 @@ a.duplicate { display: none !important; }
 .notion-sub_header-block > div > h3,
 .notion-sub_sub_header-block > div > h4,
 .notion-text-block > div > div { padding: 0; font-weight: 400; }
+
+/*
 .notion-header-block > div > h2 { font-size: var(--font-h1); line-height: var(--font-h1-l); }
 .notion-sub_header-block > div > h3 { font-size: var(--font-h5); line-height: var(--font-h5-l); }
 .notion-sub_sub_header-block > div > h4 { font-size: var(--font-h6); line-height: var(--font-h6-l); }
 .notion-text-block > div > div { font-size: var(--font-body); line-height: var(--font-body-l); }
+*/
+
+.notion-header-block > div > h2 { font-size: var(--font-h6); line-height: var(--font-h6-l); }
+.notion-sub_header-block > div > h3 { font-size: var(--font-h6); line-height: var(--font-h6-l); }
+.notion-sub_sub_header-block > div > h4 { font-size: var(--font-h6); line-height: var(--font-h6-l); }
+.notion-text-block > div > div { font-size: var(--font-body); line-height: var(--font-body-l); }
+
 
 
 /* 라인 블록 */
