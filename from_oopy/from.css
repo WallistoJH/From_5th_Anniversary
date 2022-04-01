@@ -1,7 +1,5 @@
+
 /* 여기서 부터는 절대로!!! 건들지 말아주세요 */
-
-
-
 :root {
     --color-black: #1a1a1a;
     --color-primary: #2a6eff;
@@ -10,14 +8,15 @@
     --color-white: #ffffff;
     --color-white-gray: #f5f5f5;
 
-
     --font-h1: 56px;
     --font-h1-l: 72px;
 
-    --font-h5: 32px;
-    --font-h5-l: 40px;
-    --font-h6: 24px;
-    --font-h6-l: 32px;
+    --font-h4: 32px;
+    --font-h4-l: 40px;
+    --font-h5: 24px;
+    --font-h5-l: 32px;
+    --font-h6: 20px;
+    --font-h6-l: 28px;
     --font-body: 16px;
     --font-body-l: 24px;
     --font-caption: 12px;
@@ -146,7 +145,7 @@ html.wf-active { opacity: 1;}
 }
 a.duplicate { display: none !important; }
 .notion-app .notion-page-content > div:last-of-type(2) { display: none !important;}
-.notion-app .notion-page-content > div:first-of-type { font-family: var(--font-montserrat) !important; margin-bottom: 16px !important; }
+.notion-app .notion-page-content > div:first-of-type { font-family: var(--font-montserrat) !important; margin-bottom: 0 !important; }
 @media screen and (max-width: 980px) {
     .notion-app .notion-page-content > div { padding: 0 24px; }
 }
@@ -185,16 +184,19 @@ a.duplicate { display: none !important; }
 .notion-text-block > div > div { font-size: var(--font-body); line-height: var(--font-body-l); }
 */
 
-.notion-header-block > div > h2 { font-size: var(--font-h6); line-height: var(--font-h6-l); }
-.notion-sub_header-block > div > h3 { font-size: var(--font-h6); line-height: var(--font-h6-l); }
-.notion-sub_sub_header-block > div > h4 { font-size: var(--font-h6); line-height: var(--font-h6-l); }
+.notion-header-block > div > h2 { font-size: var(--font-h4); line-height: var(--font-h4-l); margin-bottom: 16px; }
+.notion-sub_header-block > div > h3 { font-size: var(--font-h5); line-height: var(--font-h5-l); margin-bottom: 16px; }
+.notion-sub_sub_header-block > div > h4 { font-size: var(--font-h6); line-height: var(--font-h6-l); margin-bottom: 16px; }
 .notion-text-block > div > div { font-size: var(--font-body); line-height: var(--font-body-l); }
+/*@media screen and (max-width: 980px) {*/
+/*    .notion-text-block > div > div { font-size: 14px; line-height: 21px; }*/
+/*}*/
 
 
 
 /* 라인 블록 */
 .notion-divider-block > div  { height: auto !important; }
-.notion-divider-block > div > div { border-color: var(--color-gray-line); margin-bottom: 20px; }
+.notion-divider-block > div > div { border-color: var(--color-gray-line); margin-bottom: 12px; }
 
 
 /* 이미지 블록 */
@@ -221,15 +223,25 @@ a.duplicate { display: none !important; }
     border-radius: 8px;
     padding-top: 52.176%;
 }
+@media screen and (max-width: 980px) {
+    .notion-collection_view-block .notion-gallery-view div { gap: 0 !important; }
+    .notion-collection_view-block .notion-gallery-view .notion-collection_view-block > div > div { display: block !important; }
+    .notion-collection_view-block .notion-gallery-view .notion-collection_view-block .notion-collection-item a { margin-bottom: 32px !important; height: auto !important; }
+    .notion-collection_view-block .notion-gallery-view .notion-collection_view-block .notion-collection-item:last-of-type a { margin-bottom: 0 !important; }
+}
 
 
 /* 갤러리 뷰 텍스트 영역 */
-.notion-collection_view-block .notion-gallery-view .notion-collection_view-block .notion-collection-item a > div > div:nth-of-type(2) { padding: 16px 4px 6px !important; }
+.notion-collection_view-block .notion-gallery-view .notion-collection_view-block .notion-collection-item a > div > div:nth-of-type(2) {
+    padding: 8px 4px 6px !important;
+    font-family: var(--font-montserrat);
+}
 .notion-collection_view-block .notion-gallery-view .notion-collection_view-block .notion-collection-item a > div > div:nth-of-type(2) > div { font-weight: 700; }
 .notion-collection_view-block .notion-gallery-view .notion-collection_view-block .notion-collection-item a > div > div:nth-of-type(3) { padding: 0 !important; }
 .notion-collection_view-block .notion-gallery-view .notion-collection_view-block .notion-collection-item a > div > div:nth-of-type(3) > div {
     font-size: var(--font-caption);
-    line-height: var(--font-caption-l);
+    line-height: 21px;
+    font-family: var(--font-montserrat);
 }
 .notion-collection_view-block .notion-gallery-view .notion-collection_view-block .notion-collection-item a > div > div:nth-of-type(3) > div:last-of-type > div {
     gap: 4px; margin-top: 8px; height: auto !important;
@@ -249,19 +261,19 @@ a.duplicate { display: none !important; }
 @media screen and (max-width: 980px) {
     .notion-column_list-block > div { display: block !important; }
     .notion-column_list-block > div > div { width: 100% !important; }
-    .notion-column_list-block > div > div:nth-of-type(2n) { height: 24px !important; }
+    .notion-column_list-block > div > div:nth-of-type(2n) { height: 16px !important; }
 }
 
-/* 링크 페이지 뷰 */
+/* 링크 페이지 뷰 (버튼)*/
 .notion-page-block,
 .notion-text-block { border-radius: 8px !important; }
 .notion-page-block:not(.notion-collection-item) > a,
 .notion-page-mention-token {
     display: inline-block;
     width: 100%;
-    padding: 24px;
-    font-size: 20px;
-    line-height: 28px;
+    padding: 8px;
+    font-size: 16px;
+    line-height: 24px;
     border-radius: 8px !important;
     border: 1px solid var(--color-gray-line);
     white-space: nowrap;
@@ -271,23 +283,41 @@ a.duplicate { display: none !important; }
 .notion-page-block:not(.notion-collection-item) > a div,
 .notion-page-mention-token span { font-weight: 700 !important; }
 .notion-page-block:not(.notion-collection-item) > a > div:hover,
-.notion-page-mention-token:hover {
-    background: none !important;
-    box-shadow: none !important;
-}
+.notion-page-mention-token:hover { background: none !important; box-shadow: none !important; }
 .notion-page-block:not(.notion-collection-item) > a:hover,
 .notion-page-mention-token:hover { opacity: 0.6; }
+
+.notion-page-block:not(.notion-collection-item) > a div,
+.notion-page-mention-token div,
+.notion-page-mention-token__title{ border: none !important; }
 
 @media screen and (max-width: 980px) {
     .notion-page-block:not(.notion-collection-item) > a,
     .notion-page-mention-token {
-        font-size: 16px;
-        line-height: 24px;
-        padding: 16px;
+        /*font-size: 16px;*/
+        /*line-height: 24px;*/
+        /*padding: 8px;*/
     }
 }
 
 
+/* 바로가기 아이콘 삭제 */
+.notion-emoji {
+    position: relative;
+    top: -3px;
+    width: 21px !important;
+    height: 21px !important;
+    vertical-align: top;
+}
+.notion-page-mention-token .notion-emoji { top: 0; }
+.notion-emoji + svg { display: none !important; }
+
+
+/* 북마크 */
+.notion-bookmark-block a {
+    border: 1px solid var(--color-gray-line);
+    border-radius: 8px;
+}
 
 
 
@@ -298,10 +328,7 @@ a.duplicate { display: none !important; }
 
 /* 노션 콜아웃(링크) 버튼 -- 외부 링크를 사용할 경우 */
 .notion-callout-block { font-size: 20px; line-height: 28px; }
-.notion-callout-blcok > div > div {
-    border-color: var(--color-gray-line) !important;
-    border-radius: 8px !important;
-}
+.notion-callout-blcok > div > div { border-color: var(--color-gray-line) !important; border-radius: 8px !important; }
 
 
 
@@ -426,5 +453,3 @@ div.notion-toggle-block[data-block-id='06c3884e-2845-435b-8d66-574fd9840f03'] {
 @media screen and (max-width: 980px) {
     div.notion-column-block[data-block-id='257a1f32-f4bb-4dfd-8e59-284acf33762b'] { display: none !important;}
 }
-
-
