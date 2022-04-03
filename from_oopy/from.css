@@ -134,12 +134,16 @@ html.wf-active { opacity: 1;}
     _______
 */
 /* width값 재 세팅 */
-.notion-app .notion-page-content { padding: 0 !important; width: 100% !important; }
+.notion-app .notion-page-content {
+    padding: 0 40px !important;
+    max-width: 1440px !important;
+    width: 100% !important;
+}
 /*.notion-app .notion-page-content > div:first-of-type { max-width: 100%; padding: 0; background: #f5f5f5; }*/
 .notion-app .notion-page-content > div {
-    max-width: 1440px;
+    /*max-width: 1440px;
     width: 100%;
-    padding: 0 40px;
+    padding: 0 40px;*/
     margin: 0 !important;
     box-sizing: border-box;
 }
@@ -147,7 +151,7 @@ a.duplicate { display: none !important; }
 .notion-app .notion-page-content > div:last-of-type(2) { display: none !important;}
 .notion-app .notion-page-content > div:first-of-type { font-family: var(--font-montserrat) !important; margin-bottom: 0 !important; }
 @media screen and (max-width: 980px) {
-    .notion-app .notion-page-content > div { padding: 0 24px; }
+    .notion-app .notion-page-content { padding: 0 24px !important; }
 }
 
 /* 상단 프롬 움직이는 웹 pc에서 숨김*/
@@ -207,13 +211,12 @@ a.duplicate { display: none !important; }
 }
 
 
+
 /* 갤러리 뷰 */
 .notion-collection_view-block > div:nth-of-type(2) > div > div:first-of-type { padding: 0 !important }
 .notion-collection_view-block > div { padding: 0; }
 .notion-collection_view-block .notion-gallery-view { padding: 0; }
-.notion-collection_view-block .notion-gallery-view div {
-    gap: 24px; height: auto !important;
-}
+.notion-collection_view-block .notion-gallery-view div { gap: 24px; height: auto !important; }
 .notion-collection_view-block .notion-gallery-view .notion-collection_view-block > div > div { padding: 24px 0 0 !important; }
 .notion-collection_view-block .notion-gallery-view .notion-collection_view-block .notion-collection-item a { box-shadow: none !important; }
 .notion-collection_view-block .notion-gallery-view .notion-collection_view-block .notion-collection-item a > div { gap: 0 !important; }
